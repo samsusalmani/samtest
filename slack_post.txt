@@ -1,6 +1,6 @@
-Hi, 
+Hi,
 This is from the Sam's Git Hub test post.
-Deleted this line again and again
+Added another line from the terminal
 
 -Regards
 Sam Salmani
