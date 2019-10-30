@@ -1,7 +1,7 @@
 Hi,
 This is from the Sam's Git Hub test post.
 Added another line from the terminal
-added from github portal
+added from github portal again
 
 -Regards
 Sam Salmani
