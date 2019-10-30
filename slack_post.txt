@@ -1,6 +1,6 @@
 Hi, 
 This is from the Sam's Git Hub test post.
-Deleted this line.
+Deleted this line again
 
 -Regards
 Sam Salmani
