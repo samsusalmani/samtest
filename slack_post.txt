@@ -2,5 +2,6 @@ Hi,
 This is from the Sam's Git Hub test post.
 Added another line from the terminal
 added last line
+added another last line
 -Regards
 Sam Salmani
