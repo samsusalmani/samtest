@@ -48,3 +48,8 @@ centos7-slave
 Linux centos7-slave 3.10.0-1127.10.1.el7.x86_64 #1 SMP Wed Jun 3 14:28:03 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux
  05:58:08 up 1 day, 12:27,  1 user,  load average: 0.36, 0.59, 0.55
 Test has completed
+Hellow World, I just started using Jenkins
+centos7-slave
+Linux centos7-slave 3.10.0-1127.10.1.el7.x86_64 #1 SMP Wed Jun 3 14:28:03 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux
+ 05:59:17 up 1 day, 12:28,  1 user,  load average: 0.12, 0.48, 0.51
+Test has completed
