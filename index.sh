@@ -5,3 +5,4 @@ sleep 10
 uname -a
 sleep 5
 uptime
+echo "Test has completed"
