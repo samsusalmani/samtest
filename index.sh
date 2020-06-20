@@ -6,4 +6,4 @@ uname -a
 sleep 5
 uptime
 echo "Test has completed"
-echo "last commit added"
+echo "last commit added again"
