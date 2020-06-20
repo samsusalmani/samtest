@@ -1,6 +1,6 @@
 #!/bin/bash
 echo -E "Hellow World, I just started using Jenkins"
-`hostname`
+hostname
 sleep 10
 uname -a
 sleep 5
