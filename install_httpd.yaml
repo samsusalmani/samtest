@@ -1,0 +1,49 @@
+---
+- hosts: rhelvm-slave
+  become: yes
+  vars:
+  - custom_content: "This is my Custom HTML page Version 1 !!!"
+  handlers:
+  - name: Restart apache httpd service.
+    service:
+      name: httpd
+      state: restarted
+    listen: restart_httpd
+  tasks:
+  - name: Install httpd package on {{ ansible_hostname }}.{{ ansible_domain }}
+    yum:
+      name: httpd
+      state: present
+  - name: Start the service httpd
+    service:
+      name: httpd
+      state: started
+      enabled: yes
+  - name: Delete the default lines from index.html
+    shell: |
+      echo "===============================" > "{{ file_name }}"
+      echo "    This is the HTTP Service   " >> "{{ file_name }}"
+      echo "===============================" >> "{{ file_name }}"
+  - name: Configure apache to use custom index.html
+    lineinfile:
+      path: "{{ file_name }}"
+      line: "{{ custom_content }}"
+    notify: restart_httpd
+  - name: Test the apache service.
+    uri:
+      url: http://rhelvm-slave.devops.local.com
+      return_content: yes
+    register: httpd_status
+    failed_when: "'Custom HTML' not in httpd_status.content"
+  - name: Print the msg when Install and Config was successful.
+    debug:
+      msg:
+        - "Yay, Apache Installation and Configuration was sucessfull"
+    when: httpd_status.status == 200
+  - name: Print the msg when Install and Config FAILED.
+    debug:
+      msg:
+        - "Huhh, Something went wrong, Please verify the playbook"
+    when: httpd_status.status != 200
+
+...
