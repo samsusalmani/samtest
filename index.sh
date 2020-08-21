@@ -7,3 +7,4 @@ sleep 5
 uptime
 echo "Test has completed"
 echo "last commit added again"
+echo "this is the os info `cat /etc/os-release1`"
